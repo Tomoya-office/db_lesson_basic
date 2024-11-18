@@ -1,5 +1,4 @@
 Q1.
-
 CREATE TABLE departments (
     -> department_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     -> name VARCHAR(20) NOT NULL,
@@ -7,3 +6,7 @@ CREATE TABLE departments (
     -> updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
     -> );
   
+
+Q2.
+ALTER TABLE people add department_id INT UNSIGNED after email;
+
