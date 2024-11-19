@@ -1,4 +1,4 @@
-Q1.
+/*Q1.*/
 CREATE TABLE departments (
     -> department_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     -> name VARCHAR(20) NOT NULL,
@@ -7,6 +7,43 @@ CREATE TABLE departments (
     -> );
   
 
-Q2.
+/*Q2.*/
 ALTER TABLE people add department_id INT UNSIGNED after email;
 
+
+/*Q3.*/
+INSERT INTO departments (name)
+    -> VALUES
+    -> ('営業'),
+    -> ('開発'),
+    -> ('経理'),
+    -> ('人事'),
+    -> ('情報システム');
+
+
+/*reportsの元あったデータ番号を振りなおす処理*/
+UPDATE reports SET person_id = 5 WHERE report_id = 1;
+UPDATE reports SET person_id = 3 WHERE report_id = 2;
+UPDATE reports SET person_id = 7 WHERE report_id = 3;
+UPDATE reports SET person_id = 4 WHERE report_id = 4;
+UPDATE reports SET person_id = 10 WHERE report_id = 5;
+UPDATE reports SET person_id = 8 WHERE report_id = 6;
+UPDATE reports SET person_id = 1 WHERE report_id = 7;
+UPDATE reports SET person_id = 6 WHERE report_id = 8;
+UPDATE reports SET person_id = 9 WHERE report_id = 9;
+UPDATE reports SET person_id = 2 WHERE report_id = 10;
+
+/*新規5人追加*/
+INSERT INTO people (name, email, department_id, age, gender)
+  ('山田駿', 'yamada@gizumo.co.jp', 1, 54, 1),
+  ('白川かずま', 'kazumax@gizumo.co.jp', 2, 24, 1),
+　('佐藤健', 'takerux@gizumo.co.jp', 1, 35, 1),
+  ('須貝雪奈', 'gorira@gizumo.co.jp', 4, 24, 2),
+  ('大野龍也', 'ryux@gizumo.co.jp', 1, 24, 1);
+
+/*今までいた人にもdepartment_idを振り分け*/
+ UPDATE people SET department_id = 3 WHERE person_id = 1;
+ UPDATE people SET department_id = 2 WHERE person_id = 2;
+ UPDATE people SET department_id = 5 WHERE person_id = 3;
+ UPDATE people SET department_id = 2 WHERE person_id = 4;
+ UPDATE people SET department_id = 2 WHERE person_id = 6;
