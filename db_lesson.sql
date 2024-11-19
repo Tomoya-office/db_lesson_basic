@@ -65,3 +65,7 @@ WHERE --特定のレコードのみの取得
   `department_id` = 1
 ORDER BY --ソート。DESCを使用すると、降順になるが指定がないので昇順となる。
   `created_at`;
+
+
+/*Q7.*/
+SELECT name, age, gender FROM people WHERE gender = 2 AND 20 <= age AND age <= 30 || gender = 1 AND 40 <= age;
