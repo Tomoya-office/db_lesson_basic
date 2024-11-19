@@ -73,3 +73,7 @@ SELECT name, age, gender FROM people WHERE gender = 2 AND 20 <= age AND age <= 3
 
 /*Q8.*/
  SELECT * FROM people WHERE department_id = 1 ORDER BY age ASC;
+
+/*Q9.*/
+SELECT AVG(age) AS average_age FROM people WHERE gender=2;
+
