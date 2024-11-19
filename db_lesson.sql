@@ -41,6 +41,8 @@ INSERT INTO people (name, email, department_id, age, gender)
   ('須貝雪奈', 'gorira@gizumo.co.jp', 4, 24, 2),
   ('大野龍也', 'ryux@gizumo.co.jp', 1, 24, 1);
 
+
+/*Q4.*/
 /*今までいた人にもdepartment_idを振り分け*/
  UPDATE people SET department_id = 3 WHERE person_id = 1;
  UPDATE people SET department_id = 2 WHERE person_id = 2;
