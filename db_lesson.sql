@@ -54,3 +54,14 @@ INSERT INTO people (name, email, department_id, age, gender)
 
 /*Q5.*/
 SELECT  name, age, gender FROM people WHERE gender = 1 ORDER BY age DESC;
+
+
+/*Q6.*/
+SELECT --セレクトで表示したい必要な情報を取得
+  `name`, `email`, `age`
+FROM --取得したいテーブルの指定
+  `people`
+WHERE --特定のレコードのみの取得
+  `department_id` = 1
+ORDER BY --ソート。DESCを使用すると、降順になるが指定がないので昇順となる。
+  `created_at`;
