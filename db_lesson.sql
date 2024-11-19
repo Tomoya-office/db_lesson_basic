@@ -7,6 +7,9 @@ CREATE TABLE departments (
     );
   
 
+--プライマリーキーの説明・・・プライマリーキーは主キー制約のことで
+--インデックス化して振り分けることができる。
+
 /*Q2.*/
 ALTER TABLE people add department_id INT UNSIGNED after email;
 
