@@ -49,3 +49,8 @@ INSERT INTO people (name, email, department_id, age, gender)
  UPDATE people SET department_id = 5 WHERE person_id = 3;
  UPDATE people SET department_id = 2 WHERE person_id = 4;
  UPDATE people SET department_id = 2 WHERE person_id = 6;
+
+
+
+/*Q5.*/
+SELECT  name, age, gender FROM people WHERE gender = 1 ORDER BY age DESC;
